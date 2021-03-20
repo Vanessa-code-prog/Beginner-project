@@ -7,8 +7,6 @@ This function should return a random integer between 0 and 9.*/
 
 const generateTarget = () => Math.floor(Math.random() *9);
 
-console.log(generateTarget())
-
 /* Create a compareGuesses() function. This function will be called each round to determine which guess is closest to the target number.
 This function:
 Has three parameters representing the user (human) guess, a computer guess, and the secret target number to be guessed.
@@ -25,8 +23,6 @@ if (userGuess <= computerGuess) {
  }
 };
 
-console.log(compareGuesses(3, 5, 2));
-
 /* Create an updateScore() function. This function will be used to correctly increase the winner’s score after each round.
 This function:
 Has a single parameter. This parameter will be a string value representing the winner.
@@ -35,18 +31,15 @@ Does not need to return any value.*/
 
 const updateScore = winner => {
   if (winner === 'human') {
-   return humanScore +=1;
+  humanScore += 1;
 } else {
-   return computerScore +=1;
+  computerScore += 1;
 }
 };
-
-console.log(updateScore('human'))
 
 /*  Create an advanceRound() function. This function will be used to update the round number after each round.
 advanceRound() should increase the value of currentRoundNumber by 1.*/
 
 const advanceRound = () => currentRoundNumber +=1;  
 
-console.log(advanceRound())
 
